@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title> JavaScript</title>
+    <link rel="stylesheet" href="index.css">
+
+    <script>
+        //Escrever os códigos javascripts incorporados.
+    
+        //Aguardando o carregamento da Página.
+        window.onload =() => {
+            console.log("Evento de carregamento concluído!");
+        //Alteração da cor de fundo da página. 
+        document.body.style.backgroundColor='rgb(255,180,0)';
+
+        var botoes = document.getElementsByTagName('button');
+        console.log('Total de botões: ' + botoes.length);
+
+        var primeiroBotao = botoes[0];
+        console.log('Primeiro Botão:' + primeiroBotao);
+
+        var segundoBotao = botoes[1];
+        console.log('Segundo Botão: ' + segundoBotao);
+
+        //Carregamento do botao utilizando ID.
+        var btnPrimeiro = document.getElementById('btnPrimeiro');
+        console.log('BTN Primeiro:' + btnPrimeiro.TextContent);
+
+        btnPrimeiro.onclick = () =>{
+            alert('Olá Javascript incorporado!');
+        }
+        }
+    
+    </script>
+</head>
+<body>
+    <button id="btnPrimeiro">Clique incorporado!</button><br>
+   <button id="btnSegundo"ondblclick="alert('Olá Clique Duplo!')">Clique-duplo inline!</button><br>
+   <button class= "btnTerceiro"> Clique Vinculado!</button><br>
+    <h1 onclick="alert('Clique com texto!')"> Um texto com click </h1>
